@@ -1,4 +1,6 @@
-# Astroship - Astro Starter Template 🛸
+# Resource gallery in making 🛸
+
+## .............
 
 Astroship is a starter template for startups, marketing websites, landing pages & blog. Built with Astro & TailwindCSS.
 
