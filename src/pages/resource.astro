@@ -1,5 +1,5 @@
 ---
-import Card from '../components/Card.astro';
+import Card from '../components/card.astro';
 
 import { Picture } from "@astrojs/image/components";
 import Container from "@components/container.astro";
@@ -14,10 +14,14 @@ import { log } from "astro/dist/core/logger/core";
 	<main>
 		<h1>Welcome to <span class="text-gradient">Resource Gallery</span></h1>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+			To contribute, open the directory <code><a href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages">src/pages</a></code> on GitHub.<br />
+			<strong><a href="https://github.com/Astrodevil/resource-gallery/issues/1">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as early contributor🎉
 		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://astro.build/themes/"
+				title="Roadmaps"
+				body="Explore a galaxy of community-built starter themes."
+			/>
 			<Card
 				href="https://docs.astro.build/"
 				title="Open Source"
@@ -43,6 +47,46 @@ import { log } from "astro/dist/core/logger/core";
 				title="Android"
 				body="Explore a galaxy of community-built starter themes."
 			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="JavaScript"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="DevOps"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Flutter"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="APIs"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Git"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Frameworks"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Python"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Java"
+				body="Explore a galaxy of community-built starter themes."
+			/>
 		</ul>
 	</main>
 </Layout>
@@ -51,7 +95,7 @@ import { log } from "astro/dist/core/logger/core";
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 150ch;
 	}
 	h1 {
 		font-size: 3rem;
@@ -93,7 +137,7 @@ import { log } from "astro/dist/core/logger/core";
 
 	:root {
 		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #100f0f 30%, rgb(255, 255, 255) 60%);
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #000000 30%, rgb(255, 255, 255) 60%);
 	}
 	html {
 		font-family: system-ui, sans-serif;
