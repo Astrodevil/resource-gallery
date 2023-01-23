@@ -20,7 +20,7 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/screely.png",
   Astro.site
 ).toString();
 
@@ -42,22 +42,22 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Wants to start open-source? Are you a beginner? Don't know how, where, why to start? You are in right place.😊 Open-Source-Gallery provides you with all the resources needed to become a good open-source contributor, project maintainer & developer. "
+      description="Wants to start open-source? Are you a beginner? Don't know how, where, why to start? You are in right place.😊 Open-Source-Gallery provides you with all the resources needed to become a good open-source contributor, project maintainer & developer."
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
+        creator: "@astrodevil_",
+        site: "@resourcegallery",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Wants to start open-source? Are you a beginner? Don't know how, where, why to start? You are in right place.😊 Open-Source-Gallery provides you with all the resources needed to become a good open-source contributor, project maintainer & developer.`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Resource Gallery Homepage Screenshot",
         },
       }}
     />

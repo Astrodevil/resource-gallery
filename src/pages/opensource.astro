@@ -8,92 +8,51 @@ import Layout from "@layouts/Layout.astro";
 import { getFormattedDate } from "@utils/all";
 import { log } from "astro/dist/core/logger/core";
 
+
 ---
 
 <Layout title="Resources | Resource Gallery">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Resource Gallery</span></h1>
+		<h1>Resource Gallery - <span class="text-gradient">Open Source</span></h1>
 		<p class="instructions">
 			To contribute, open the directory <code><a href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages">src/pages</a></code> on GitHub.<br />
 			<strong><a href="https://github.com/Astrodevil/resource-gallery/issues/1">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as early contributor🎉
 		<ul role="list" class="link-card-grid">
 			<Card
+				href="https://roadmap.sh"
+				target="_blank"
+				title="Roadmaps"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://mranand.com/"
+				target="_blank"
+				title="Articles"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
 				href="./opensource"
 				target="_blank"
-				title="Open Source"
+				title="Videos"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+      <Card
+				href="./opensource"
+				target="_blank"
+				title="Programs"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+      <Card
+				href="./opensource"
+				target="_blank"
+				title="Community"
 				body="Learn how Astro works and explore the official API docs."
 			/>
 			<Card
-				href="./webdev"
+				href="./opensource"
 				target="_blank"
-				title="Web Dev"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="AI/ML"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				target="_blank"
-				title="Data Structures"
-				body="Come say hi to our amazing Discord community."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Android"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="JavaScript"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="DevOps"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Flutter"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="APIs"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Git"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Frameworks"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Python"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Java"
-				body="Explore a galaxy of community-built starter themes."
+				title="Peoples"
+				body="Learn how Astro works and explore the official API docs."
 			/>
 		</ul>
 	</main>
@@ -103,7 +62,7 @@ import { log } from "astro/dist/core/logger/core";
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 150ch;
+		max-width: 100ch;
 	}
 	h1 {
 		font-size: 3rem;
