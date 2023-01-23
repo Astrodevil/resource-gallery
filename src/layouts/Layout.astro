@@ -27,8 +27,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Resource Gallery"
+  : "Resource Gallery - Resources you need to start in tech";
 ---
 
 <!DOCTYPE html>
@@ -36,13 +36,13 @@ const makeTitle = title
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
     <meta name="generator" content={Astro.generator} />
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Wants to start open-source? Are you a beginner? Don't know how, where, why to start? You are in right place.😊 Open-Source-Gallery provides you with all the resources needed to become a good open-source contributor, project maintainer & developer. "
       canonical={canonicalURL}
       twitter={{
         creator: "@surjithctly",
