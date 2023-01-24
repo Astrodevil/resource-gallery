@@ -1,13 +1,9 @@
 ---
 import Card from '../components/card.astro';
+import Layout from '../layouts/Layout.astro';
 
-import { Picture } from "@astrojs/image/components";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import Layout from "@layouts/Layout.astro";
-import { getFormattedDate } from "@utils/all";
-import { log } from "astro/dist/core/logger/core";
 
+const { frontmatter } = Astro.props;
 ---
 
 <Layout title="Resources | Resource Gallery">
@@ -92,18 +88,25 @@ import { log } from "astro/dist/core/logger/core";
 			<Card
 				href="https://astro.build/themes/"
 				target="_blank"
+				title="SQL"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				target="_blank"
 				title="Java"
 				body="Explore a galaxy of community-built starter themes."
 			/>
 		</ul>
 	</main>
+	
 </Layout>
 
 <style>
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 150ch;
+		max-width: 120ch;
 	}
 	h1 {
 		font-size: 3rem;
@@ -147,10 +150,10 @@ import { log } from "astro/dist/core/logger/core";
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #000000 30%, rgb(255, 255, 255) 60%);
 	}
-	html {
+	/* html {
 		font-family: system-ui, sans-serif;
 		background-color: #F6F6F6;
-	}
+	} */
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
