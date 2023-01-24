@@ -3,11 +3,16 @@ import Container from "@components/container.astro";
 import { getFormattedDate } from "@utils/all";
 import { log } from "astro/dist/core/logger/core";
 import Layout from "./Layout.astro";
+
 import { YouTube } from '@astro-community/astro-embed-youtube';
+import { Tweet } from '@astro-community/astro-embed-twitter';
+import { Icon } from 'astro-icon'
 
 const { frontmatter } = Astro.props;
 ---
 <!-- <YouTube id="https://youtu.be/xtTy5nKay_Y" /> -->
+<!-- <Tweet id="https://twitter.com/astrodotbuild/status/1511750228428435457" /> -->
+
 <Layout title={frontmatter.title}>
   <Container>
     <div class="mx-auto max-w-[735px] mt-14">
@@ -43,7 +48,7 @@ const { frontmatter } = Astro.props;
     </div>
     <div class="text-center mt-8">
       <a
-        href="/opensource"
+        href="/resource"
         class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
         >← Back to ReGala</a
       >

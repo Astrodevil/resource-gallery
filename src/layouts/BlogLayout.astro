@@ -3,6 +3,10 @@ import Container from "@components/container.astro";
 import { getFormattedDate } from "@utils/all";
 import { log } from "astro/dist/core/logger/core";
 import Layout from "./Layout.astro";
+import { Icon } from 'astro-icon'
+
+import { YouTube } from '@astro-community/astro-embed-youtube';
+import { Tweet } from '@astro-community/astro-embed-twitter';
 
 const { frontmatter } = Astro.props;
 ---

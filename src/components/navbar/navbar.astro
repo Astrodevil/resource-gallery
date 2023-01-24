@@ -3,6 +3,7 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Icon } from 'astro-icon'
 
 const menuitems = [
   
@@ -24,13 +25,15 @@ const menuitems = [
   },
   {
     title: "Quick Links",
-    path: "#",
+    // path: "#",
     children: [
-      { title: "GitHub", path: "#" },
-      { title: "Web Development", path: "#" },
-      { title: "Machine Learning", path: "#" },
+      { title: "Twitter❤️", path: "https://twitter.com/astrodevil_", target: "_blank"},
+      { title: "Instagram👀", path: "https://www.instagram.com/codes.astro/", target: "_blank" },
+      { title: "Sponser on Ko-Fi☕", path: "https://ko-fi.com/astrodevil", target: "_blank" },
     ],
   },
+  
+  
  
   // {
   //   title: "Contact",
