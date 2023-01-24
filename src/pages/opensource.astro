@@ -7,7 +7,7 @@ import { getFormattedDate } from "@utils/all";
 import { log } from "astro/dist/core/logger/core";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob("./content/opensource/*.{md,mdx}")).sort(
+const posts = (await Astro.glob("./opensource/*.{md,mdx}")).sort(
   (a, b) =>
     new Date(b.frontmatter.publishDate).valueOf() -
     new Date(a.frontmatter.publishDate).valueOf()
