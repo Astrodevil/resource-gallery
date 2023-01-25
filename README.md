@@ -1,22 +1,10 @@
-# Resource gallery in making 🛸
+# Resource gallery🛸
+Resource Gallery provides the tools and resources you need to evolve into a skilled developer. 
 
-## .............
+You can grab a cool Astro badge after successful merged PR from [here](https://astro.badg.es/contributors/)
 
-Astroship is a starter template for startups, marketing websites, landing pages & blog. Built with Astro & TailwindCSS.
-
-This Free Template is sponsored by [Web3Templates](https://web3templates.com)
-
-## Live Demo
-
-### [https://astroship.web3templates.com/](https://astroship.web3templates.com/)
-
-### [Download Astroship Template](https://web3templates.com/templates/astroship-starter-website-template-for-astro)
-
-## Deploy on Vercel
-
-Click the below link to deploy this template on Vercel
-
-[![Deployed on Cloudflare Pages](https://logos-world.net/wp-content/uploads/2022/04/Cloudflare-Logo.png)]()
+## Deployed on Cloudflare pages
+<a href="https://pages.cloudflare.com/" target="blank"><img src="https://img.icons8.com/color/cloudflare"/></a>
 
 ![image](https://github.com/Astrodevil/resource-gallery/blob/main/public/screely.png)
 
@@ -34,9 +22,7 @@ Alternatively, you can clone the project directly from this repo to your local s
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/surjithctly/astroship.git myProjectName
-# or
-git clone https://github.com/surjithctly/astroship.git .
+git clone https://github.com/Astrodevil/resource-gallery.git .
 ```
 
 The `.` will clone it to the current directory so make sure you are inside your project folder first.
@@ -112,10 +98,12 @@ TailwindCSS is already configured in this repo, so you can start using it withou
 
 ## Credits
 
-[Hero Illustration](https://www.figma.com/community/file/1108400791662599811) by [Streamline](https://www.streamlinehq.com/)
+[Astroship](https://astroship.web3templates.com/) by [Web3Templates](https://web3templates.com)
+
+
 
 ## 👀 Want to learn more?
 
-Feel free to check out [Astro Docs](https://docs.astro.build) or jump into our [Discord Chat](https://web3templates.com/discord).
+Feel free to check out [Astro Docs](https://docs.astro.build)
 
 [![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
