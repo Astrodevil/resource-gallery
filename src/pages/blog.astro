@@ -6,6 +6,7 @@ import Layout from "@layouts/Layout.astro";
 import Card from '../components/card.astro';
 import { getFormattedDate } from "@utils/all";
 import { log } from "astro/dist/core/logger/core";
+import { Tweet, Vimeo, YouTube } from 'astro-embed';
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(

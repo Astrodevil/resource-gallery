@@ -15,7 +15,7 @@ tags: [opensource,document]
 ## [CodeTriage](https://www.codetriage.com/)
 ## [Good First Issue](https://goodfirstissue.dev/)
 
-<iframe width="853" height="680" src="https://goodfirstissue.dev/" title="good-first-issue"></iframe>
+<iframe width="100%" height="520" src="https://goodfirstissue.dev/" title="good-first-issue"></iframe>
 
 ## [Up For Grabs](https://up-for-grabs.net/#/)
-<iframe width="853" height="680" src="https://up-for-grabs.net/#/" title="good-first-issue"></iframe>
+<iframe width="100%" height="520" src="https://up-for-grabs.net/#/" title="good-first-issue"></iframe>

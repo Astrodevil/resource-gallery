@@ -11,16 +11,17 @@ tags: [opensource,document,git,github]
 
 ---
 
+
 ## What is Open Source & How to Start?
 
-<iframe width="853" height="505" src="https://www.youtube.com/embed/msyGybzCKRs" title="What is Open Source & How to Start?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+<iframe width="100%" height="" src="https://www.youtube.com/embed/msyGybzCKRs" title="What is Open Source & How to Start?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 
 ## Github Star Eddie Jaoude: Why should you Open Source?
 
-<iframe width="853" height="505" src="https://www.youtube.com/embed/XYA97AydLVs" title="Github Star Eddie Jaoude: Why should you Open Source?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/XYA97AydLVs" title="Github Star Eddie Jaoude: Why should you Open Source?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Complete Guide to Open Source - How to Contribute 
-<iframe width="853" height="505" src="https://www.youtube.com/embed/yzeVMecydCE" title="Complete Guide to Open Source - How to Contribute" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/yzeVMecydCE" title="Complete Guide to Open Source - How to Contribute" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Complete Git and GitHub Tutorial 
-<iframe width="853" height="505" src="https://www.youtube.com/embed/apGV9Kg7ics" title="Complete Git and GitHub Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/apGV9Kg7ics" title="Complete Git and GitHub Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
