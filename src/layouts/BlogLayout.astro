@@ -7,6 +7,7 @@ import { Icon } from 'astro-icon'
 
 import { YouTube } from '@astro-community/astro-embed-youtube';
 import { Tweet } from '@astro-community/astro-embed-twitter';
+import Sectionhead from "@components/sectionhead.astro";
 
 const { frontmatter } = Astro.props;
 ---
@@ -19,7 +20,7 @@ const { frontmatter } = Astro.props;
       </span>
       <h1
         class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
-        {frontmatter.title}
+        {frontmatter.title}        
       </h1>
       <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
         <span class="text-gray-400">

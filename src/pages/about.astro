@@ -5,7 +5,7 @@ import Sectionhead from "@components/sectionhead.astro";
 import { Picture } from "@astrojs/image/components";
 
 const TeamImg1 =
-  "https://images.unsplash.com/photo-1580489944761-15a19d654956?&fit=crop&w=280";
+  "https://cdn.bio.link/uploads/profile_pictures/2021-12-17/rIgWZLgFZMi84ZKzAZ2Rw3K2PbIJ5PJk.png";
 const TeamImg2 =
   "https://images.unsplash.com/photo-1633332755192-727a05c4013d?&fit=crop&w=280";
 const TeamImg3 =
@@ -13,17 +13,17 @@ const TeamImg3 =
 
 const team = [
   {
-    name: "Janette Lynch",
-    title: "Senior Director",
+    name: "Mr. Ånand",
+    title: "Creator",
     avatar: {
       src: TeamImg1,
-      width: 480,
-      height: 560,
+      width: 580,
+      height: 580,
     },
   },
   {
-    name: "Mr. Ånand",
-    title: "Creator",
+    name: "John",
+    title: "Contributor",
     avatar: {
       src: TeamImg2,
       width: 580,
@@ -45,13 +45,16 @@ const team = [
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title"><span class="text-gradient">About</span></Fragment>
+      <Fragment slot="desc">Our team consists of each contributor improving the <strong>Resource Gallery</strong>.</Fragment>
     </Sectionhead>
+    <p class="instructions">
+			To add your profile, after contribution open the directory <code><a href="https://github.com/Astrodevil/resource-gallery/blob/main/src/pages/about.astro">src/pages/about</a></code> on GitHub.<br />
+			<strong><a href="https://github.com/Astrodevil/resource-gallery/issues">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as early contributor🎉</p>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
+        Empowering the learners with resources & tools.
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
         We're a multi-cultural team from around the world! We come from diverse
@@ -86,3 +89,61 @@ const team = [
     </div>
   </Container>
 </Layout>
+
+<style>
+	/* main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 120ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	} */
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	/* .link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	} */
+
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #000000 30%, rgb(255, 255, 255) 60%);
+	}
+	/* html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	} */
+</style>
