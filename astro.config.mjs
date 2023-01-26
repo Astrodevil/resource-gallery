@@ -5,7 +5,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://resource-gallery.pages.dev/",
+  site: "https://resourcegallery.live/",
   integrations: [
     tailwind(),
     image({
