@@ -14,7 +14,7 @@ Network"
 publishDate: "2023-01-27T10:20:36.050Z"
 # canonical: "https://resource-gallery.pages.dev/"
 image: "/2024.png"
-category: "Documentation"
+category: "Tutorials"
 author: "AbdulSalaam Noibi"
 layout: "@layouts/ContentLayout.astro"
 tags: [webdev, tailwindcss, code, frontend]

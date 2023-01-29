@@ -6,7 +6,7 @@ excerpt: "React is a powerful and popular JavaScript library that is widely used
 publishDate: "2023-01-28T09:55:36.050Z"
 # canonical: "https://resource-gallery.pages.dev/"
 image: "/reacts.png"
-category: "Documentation"
+category: "Tutorials"
 author: "AbdulSalaam Noibi"
 layout: "@layouts/ContentLayout.astro"
 tags: [webdev, tailwindcss, React, frontend]
