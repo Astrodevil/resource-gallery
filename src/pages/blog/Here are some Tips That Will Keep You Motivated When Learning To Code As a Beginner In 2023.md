@@ -1,23 +1,13 @@
 ---
-title: "Here are some Tips That Will Keep You Motivated When Learning To Code As a Beginner In 2023
-"
+title: "Here are some Tips That Will Keep You Motivated When Learning To Code As a Beginner In 2023"
 excerpt: "Here are some Tips That Will Keep You Motivated When Learning To Code As a Beginner In 2023
-Pick a specialty
-
-Get well-organized resources for your niche
-
-Learn
-
-Build something from what you have learned
-
-Network"
+Pick a specialty, Get well-organized resources for your niche, Build something from what you have learned & Network"
 publishDate: "2023-01-27T10:20:36.050Z"
-# canonical: "https://resource-gallery.pages.dev/"
-image: "/2024.png"
-category: "Tutorials"
+image: "/src/assets/2024.png"
+category: "Tips & Tricks"
 author: "AbdulSalaam Noibi"
-layout: "@layouts/ContentLayout.astro"
-tags: [webdev, tailwindcss, code, frontend]
+layout: "@layouts/BlogLayout.astro"
+tags: [coding, programming, motivation, beginner]
 ---
 Here are some Tips That Will Keep You Motivated When Learning To Code As a Beginner In 2023
 Pick a specialty
@@ -104,6 +94,6 @@ Set up a git-hub account, learn how to use the git-hub environment, git commands
 
 Lastly, remember your consistency and perseverance toward learning will pay off.GOODLUCK!!!
 
-## please if you enjoy reading this article, subscribe to my youtube channel <a href="https://www.youtube.com/channel/UCJQmbtiMOaWro6ZCstnkhkg">CHANNEL</a> THANKS FOR READING.
+**If you enjoy reading this article, subscribe to my [youtube channel](youtube.com/channel/UCJQmbtiMOaWro6ZCstnkhkg). THANKS FOR READING.**
 
 

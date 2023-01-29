@@ -1,25 +1,22 @@
 ---
-title: "Mastering Advanced React Features: A Step-by-Step Guide to Hooks, Context, and Portals.
-"
-excerpt: "React is a powerful and popular JavaScript library that is widely used for building web applications. It provides a set of advanced features that allow developers to create complex and dynamic user interfaces with ease. These features include hooks, context, and portals. In this article, we will take a closer look at each of these advanced features and discuss when and how to use them in web development.
-"
+title: "Mastering Advanced React Features: A Step-by-Step Guide to Hooks, Context, and Portals"
+excerpt: "React is a powerful and popular JavaScript library that is widely used for building web applications. It provides a set of advanced features that allow developers to create complex and dynamic user interfaces with ease. These features include hooks, context, and portals. In this article, we will take a closer look at each of these advanced features and discuss when and how to use them in web development."
 publishDate: "2023-01-28T09:55:36.050Z"
-# canonical: "https://resource-gallery.pages.dev/"
-image: "/reacts.png"
+image: "/src/assets/reacts.png"
 category: "Tutorials"
 author: "AbdulSalaam Noibi"
-layout: "@layouts/ContentLayout.astro"
-tags: [webdev, tailwindcss, React, frontend]
+layout: "@layouts/BlogLayout.astro"
+tags: [webdev, react, javascript]
 ---
 React is a powerful and popular JavaScript library that is widely used for building web applications. It provides a set of advanced features that allow developers to create complex and dynamic user interfaces with ease. These features include hooks, context, and portals. In this article, we will take a closer look at each of these advanced features and discuss when and how to use them in web development.
 
 ## Hooks
 Hooks are a powerful feature in React that allow developers to use state and other React features in functional components. This is a significant advancement over traditional React development, where state and lifecycle methods were only available in class components. Hooks provide a more intuitive and easy-to-use approach to state management in functional components, making it easier for developers to manage and maintain state in their applications.
 
-## context
+## Context
 Context is another advanced feature in React that allows developers to share data across different components in a tree-like structure. This feature is particularly useful for sharing global data and state across different parts of an application. For example, a developer might use context to store and share a user's login status across multiple components. This allows developers to avoid passing props through multiple levels of the component tree, which can make the code more difficult to read and understand.
 
-## portals
+## Portals
 Portals are a unique feature in React that allows developers to render components outside of the component tree. This feature is useful for creating modals, tooltips, and other types of UI elements that need to be rendered in a specific location on the page. Portals are particularly useful for creating UI elements that need to be rendered on top of other elements, such as a modal that is displayed over the entire page.
 
 When it comes to using these advanced features in web development, it is important to understand when and how to use them effectively. Hooks are best used for managing state in functional components, while context is best used for sharing global data and state across different parts of an application. Portals are best used for creating UI elements that need to be rendered in a specific location on the page, such as modals or tooltips.
@@ -48,6 +45,6 @@ React also offers a feature called Server-side rendering (SSR). SSR allows devel
 In conclusion, React is a powerful and popular JavaScript library that offers a wide range of advanced features and tools for web development. These features include hooks, context, portals, React Router, Higher Order Components, performance optimization, developer tools, Suspense, lazy loading, Server-side rendering, and Concurrent mode. By understanding and effectively utilizing these features, developers can create more complex, dynamic, and efficient web applications that provide a seamless user experience. React provides developers with all the tools they need to build highly responsive and dynamic web applications that meet the needs of modern users.
 
 
-## Follow Me on <a href="https://twitter.com/Clericcoder">Twitter </a> 
+**Follow Me on [Twitter](https://twitter.com/Clericcoder)** 
 
 
