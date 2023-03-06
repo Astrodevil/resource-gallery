@@ -4,7 +4,7 @@ description: "Blog website using a static site generator Hugo and deploying it t
 excerpt: "Blog website using a static site generator Hugo and deploying it to Netlify"
 publishDate: "2022-11-08T11:39:36.050Z"
 # canonicalURL: 'https://mranand.com/blogs/creating-personal-blog-with-hugo-and-netlify/'
-image: "https://astrodevil.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1667839642415%2Fgsj4oCKRj.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75"
+image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1667839642415/gsj4oCKRj.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"
 category: "Tutorials"
 author: "Mr. Ånand"
 layout: "@layouts/BlogLayout.astro"
