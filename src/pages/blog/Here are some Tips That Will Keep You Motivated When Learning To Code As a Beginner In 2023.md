@@ -3,7 +3,7 @@ title: "Here are some Tips That Will Keep You Motivated When Learning To Code As
 excerpt: "Here are some Tips That Will Keep You Motivated When Learning To Code As a Beginner In 2023
 Pick a specialty, Get well-organized resources for your niche, Build something from what you have learned & Network"
 publishDate: "2023-01-27T10:20:36.050Z"
-image: "/src/assets/2024.png"
+image: "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
 category: "Tips & Tricks"
 author: "AbdulSalaam Noibi"
 layout: "@layouts/BlogLayout.astro"

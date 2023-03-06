@@ -2,7 +2,7 @@
 title: "Mastering Advanced React Features: A Step-by-Step Guide to Hooks, Context, and Portals"
 excerpt: "React is a powerful and popular JavaScript library that is widely used for building web applications. It provides a set of advanced features that allow developers to create complex and dynamic user interfaces with ease. These features include hooks, context, and portals. In this article, we will take a closer look at each of these advanced features and discuss when and how to use them in web development."
 publishDate: "2023-01-28T09:55:36.050Z"
-image: "/src/assets/reacts.png"
+image: "https://images.unsplash.com/photo-1653387300291-bfa1eeb90e16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
 category: "Tutorials"
 author: "AbdulSalaam Noibi"
 layout: "@layouts/BlogLayout.astro"
