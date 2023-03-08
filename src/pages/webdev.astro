@@ -1,85 +1,34 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import Layout from "@layouts/Layout.astro";
-import { getFormattedDate } from "@utils/all";
-import { log } from "astro/dist/core/logger/core";
-import { Tweet, Vimeo, YouTube } from 'astro-embed';
+import Card from '../components/card.astro';
+import Layout from '../layouts/Layout.astro';
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob("./webdev/*.{md,mdx}")).sort(
-  (a, b) =>
-    new Date(b.frontmatter.publishDate).valueOf() -
-    new Date(a.frontmatter.publishDate).valueOf()
-);
-console.log(posts[0].frontmatter.image);
+
+const { frontmatter } = Astro.props;
 ---
 
-<!-- <Layout title="Blog">
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title">Open Source Resources</Fragment>
-
-      <Fragment slot="desc"
-        >We write about building startups and thoughts going on our mind.</Fragment
-      >
-    </Sectionhead> -->
-
-		<Layout title="Open Source">
-			<main>
-				<h1>Resource Gallery - <span class="text-gradient">Web Development</span></h1>
-				<p class="instructions">
-					To contribute, open the directory <code><a href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages/webdev">src/pages/webdev</a></code> on GitHub.<br />
-					<strong><a href="https://github.com/Astrodevil/resource-gallery/issues">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as early contributor🎉</p>
-
-    <main class="mt-16">
-      <ul class="grid gap-16 max-w-4xl mx-auto">
-        {
-          posts.map((post, index) => (
-            <li>
-              <a href={post.url}>
-                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-                  <Picture
-                    src={post.frontmatter.image}
-                    widths={[200, 400, 800]}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    aspectRatio="16:9"
-                    alt="Thumbnail"
-                    loading={index === 0 ? "eager" : "lazy"}
-                    class="w-full rounded-md aspect-video"
-                  />
-                  <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {post.frontmatter.category}
-                    </span>
-
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-                      {post.frontmatter.title}
-                    </h2>
-
-                    <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
-                        {post.frontmatter.author}
-                      </span>
-                      <span class="text-gray-400">• </span>
-                      <time
-                        class="text-gray-400"
-                        datetime={post.frontmatter.publishDate}>
-                        {getFormattedDate(post.frontmatter.publishDate)}
-                      </time>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </main>
-  </Container>
+<Layout title="Resources | Resource Gallery">
+	<main>
+		<h1>Resource Gallery - <span class="text-gradient">JavaScript</span></h1>
+		<p class="instructions">
+			To contribute, open the directory <code><a href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages">src/pages</a></code> on GitHub.<br />
+			<strong><a href="https://github.com/Astrodevil/resource-gallery/issues">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as early contributor🎉</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://www.showwcase.com/roadmap/7/javascript-the-complete-guide"
+				target="_blank"
+				title="JavaScript - The Complete Guide (Docs)"
+				body="Learn modern JavaScript from this guided roadmap filled with content, examples, resources, and project ideas. This course is prepared by Showwcase."
+        /> 
+			<Card
+				href="https://mranand.com/series/javascript-fundamentals/"
+				target="_blank"
+				title="JavaScript Fundamentals (Blog)"
+				body="This Blog series is writted by Mr. Ånand while learning Javascript."
+			/>
+		</ul>
+	</main>
+	
 </Layout>
-
 
 <style>
 	main {
@@ -138,3 +87,4 @@ console.log(posts[0].frontmatter.image);
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 </style>
+
