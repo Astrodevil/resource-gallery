@@ -18,3 +18,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+#ignored package.json files
+package.json
+package-lock.json
