@@ -32,7 +32,7 @@ You can clone the project directly from this repo to your local system.
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/Astrodevil/resource-gallery.git .
+git clone https://github.com/ZeroOctave/resource-gallery.git .
 ```
 
 The `.` will clone it to the current directory so make sure you are inside your project folder first.
