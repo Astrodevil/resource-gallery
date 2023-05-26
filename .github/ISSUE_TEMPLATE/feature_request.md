@@ -7,7 +7,7 @@ labels: [
 ]
 ---
 
-- [ ] I am from GSSoC'23.
+- [ ] I am from GSSoC23.
 - [ ] I would like to be assigned this task.
 ---
 
