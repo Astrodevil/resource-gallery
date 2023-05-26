@@ -1,5 +1,5 @@
 ---
-title: "Top 10 JavaScropt Tips & Tricks"
+title: "Top 10 JavaScript Tips & Tricks"
 excerpt: "JavaScript is one of the most popular scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else, you may have noticed the websites these became too interactive/responsive and more beautiful, all thanks to Js and it's libraries"
 publishDate: "2023-05-25T09:55:36.050Z"
 image: "https://1.bp.blogspot.com/-pdqcVeIQp64/XDX7TzdRdcI/AAAAAAAAM8E/ZmGuB6caZqIGmEflGHcj3zgXJJrmqRLdgCLcBGAs/w1200-h630-p-k-no-nu/Free%2BCourses%2Bto%2Blearn%2BJavaScript.jpg"
