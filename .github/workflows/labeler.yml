@@ -1,4 +1,4 @@
-name: Labeling new issue
+name: Auto label
 on:
   issues:
     types: ['opened']
@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Renato66/auto-label@v2
+      - uses: Renato66/auto-label@v2.1.4
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           ignore-comments: true
