@@ -1,6 +1,6 @@
 name: 📄 Blog Contribution
 description: Want to contribute an article? You can use this one!
-title: "[DOCS] write a small description here"
+title: "[Blog] write a small description here"
 labels:
   [
    "📃Blog Contribution",
@@ -47,7 +47,10 @@ body:
       options:
         - label: "I checked and didn't find similar issue"
           required: true
-
+          
+        - label: "I am from GSSoC23"
+          required: true
+          
         - label: "I have read the [Contributing Guidelines](https://github.com/ZeroOctave/resource-gallery/blob/main/CONTRIBUTION.md)"
           required: true
 
