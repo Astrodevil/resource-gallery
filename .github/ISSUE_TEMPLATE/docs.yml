@@ -1,4 +1,4 @@
-name: 📄Blog Contribution
+name: 📄 Blog Contribution
 description: Want to contribute an article? You can use this one!
 title: "[Blog] write a small description here"
 labels:
@@ -14,7 +14,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: published link
+    id: publishedlink
     attributes:
       label: Published Link
       description: Please add published link if applicable
@@ -23,7 +23,7 @@ body:
   - type: dropdown
     id: browser
     attributes:
-      label: "Websites"
+      label: "🔄️ Websites"
       description: "What website are you using to publish your blogs?"
       options:
         - Personal Website
