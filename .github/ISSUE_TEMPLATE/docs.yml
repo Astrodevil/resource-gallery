@@ -1,0 +1,60 @@
+name: 📄 Blog Contribution
+description: Want to contribute an article? You can use this one!
+title: "[DOCS] write a small description here"
+labels:
+  [
+   "📃Blog Contribution",
+  ]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the question or issue, also include what you want to write in the blog
+    validations:
+      required: true
+  - type: textarea
+    id: published link
+    attributes:
+      label: Published Link
+      description: Please add published link if applicable
+    validations:
+      required: false
+  - type: dropdown
+    id: browser
+    attributes:
+      label: "Websites"
+      description: "What website are you using to publish your blogs?"
+      options:
+        - Personal Website
+        - Blogspot
+        - Medium
+        - Hashnode
+        - Wordpress
+        - Hackernoon
+        - Dev Community
+        - daily dev
+        - Devdojo
+        - Ghost
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: no-duplicate-issues
+    attributes:
+      label: "Checklist ✅"
+      options:
+        - label: "I checked and didn't find similar issue"
+          required: true
+
+        - label: "I have read the [Contributing Guidelines](https://github.com/ZeroOctave/resource-gallery/blob/main/CONTRIBUTION.md)"
+          required: true
+
+        - label: "I am willing to work on this issue (blank for no)"
+          required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Feel free to check out other cool repositories [here](https://github.com/ZeroOctave)
