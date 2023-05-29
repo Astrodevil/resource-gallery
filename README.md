@@ -1,4 +1,16 @@
 # [Resource gallery🛸](https://resourcegallery.live/)
+
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+ <br>
+<img src="https://img.shields.io/github/forks/ZeroOctave/resource-gallery?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues/ZeroOctave/resource-gallery?style=for-the-badge" />
+  <img src="https://img.shields.io/github/stars/ZeroOctave/resource-gallery?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/ZeroOctave/resource-gallery?style=for-the-badge" />
+  
+</div>
 Resource Gallery provides the tools and resources you need to evolve into a skilled developer. 
 
 You can grab a cool Astro badge after successful merged PR from [here](https://astro.badg.es/contributors/)
@@ -20,7 +32,7 @@ You can clone the project directly from this repo to your local system.
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/Astrodevil/resource-gallery.git .
+git clone https://github.com/ZeroOctave/resource-gallery.git .
 ```
 
 The `.` will clone it to the current directory so make sure you are inside your project folder first.
