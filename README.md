@@ -22,7 +22,7 @@ You can grab a cool Astro badge after successful merged PR from [here](https://a
 
 ### Pagespeed Score
 
-[![pagespeed](https://user-images.githubusercontent.com/1884712/210250214-7aa98167-7993-4b90-8138-326b8fa0c223.png)](https://pagespeed.web.dev/report?url=https%3A%2F%2Fastroship.web3templates.com%2F)
+[![pagespeed](https://user-images.githubusercontent.com/1884712/210250214-7aa98167-7993-4b90-8138-326b8fa0c223.png)](https://pagespeed.web.dev/analysis/https-resourcegallery-live/ym3e98xd4c?form_factor=mobile)
 
 
 ## Installation
