@@ -1,0 +1,14 @@
+name: Waiting For Review Labeler
+
+on:
+  schedule:
+    # Crontab Every Hour
+    - cron: '0 * * * *'
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kentaro-m/waiting-for-review-labeler@main
+        with:
+          hours-before-add-label: 24

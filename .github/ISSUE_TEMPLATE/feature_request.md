@@ -9,6 +9,7 @@ labels: [
 
 - [ ] I am from GSSoC23.
 - [ ] I would like to be assigned this task.
+* fill [x] to check the boxes.
 ---
 
 | Section                    | Description |

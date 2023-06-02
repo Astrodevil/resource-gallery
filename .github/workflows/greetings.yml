@@ -1,0 +1,20 @@
+on:
+  fork:
+  push:
+    branches: [main]
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: "<h3>Hey👋🏼, @${{ github.actor }},  thank you for opening an issue. You need to update or make PR in under 7 days</h3>"
+          pr-message: "<h3>Hey👋🏼, @${{ github.actor }},  thank you for opening a pull request.</h3>"
+          footer: "Soon the maintainers/owner will review it and provide you with feedback/suggestions.<br>If you think it's something urgent, feel free to reach out to <a href='https://twitter.com/astrodevil_'>Anand</a> on <b>Twitter</b>.<br><br><br><b>Give us a ⭐ to show some support</b><br><b>Keep Contributing 🚀</b>"

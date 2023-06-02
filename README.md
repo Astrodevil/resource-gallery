@@ -1,4 +1,16 @@
 # [Resource gallery🛸](https://resourcegallery.live/)
+
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+ <br>
+<img src="https://img.shields.io/github/forks/ZeroOctave/resource-gallery?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues/ZeroOctave/resource-gallery?style=for-the-badge" />
+  <img src="https://img.shields.io/github/stars/ZeroOctave/resource-gallery?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/ZeroOctave/resource-gallery?style=for-the-badge" />
+  
+</div>
 Resource Gallery provides the tools and resources you need to evolve into a skilled developer. 
 
 You can grab a cool Astro badge after successful merged PR from [here](https://astro.badg.es/contributors/)
@@ -10,7 +22,7 @@ You can grab a cool Astro badge after successful merged PR from [here](https://a
 
 ### Pagespeed Score
 
-[![pagespeed](https://user-images.githubusercontent.com/1884712/210250214-7aa98167-7993-4b90-8138-326b8fa0c223.png)](https://pagespeed.web.dev/report?url=https%3A%2F%2Fastroship.web3templates.com%2F)
+[![pagespeed](https://user-images.githubusercontent.com/1884712/210250214-7aa98167-7993-4b90-8138-326b8fa0c223.png)](https://pagespeed.web.dev/analysis/https-resourcegallery-live/ym3e98xd4c?form_factor=mobile)
 
 
 ## Installation
