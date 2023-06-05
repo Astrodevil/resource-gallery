@@ -11,3 +11,7 @@ tags: [opensource,programs]
 
 ## [Google Summer of Code](https://summerofcode.withgoogle.com/)
 
+## [GirlScript Summer of Code](https://gssoc.girlscript.tech/)
+
+## [Google Summer of Code](https://hacktoberfest.com/)
+
