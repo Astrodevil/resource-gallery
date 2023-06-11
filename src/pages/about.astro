@@ -21,6 +21,7 @@ const team = [
       src: TeamImg1,
       width: 580,
       height: 580,
+     
     },
   },
   {
@@ -28,7 +29,7 @@ const team = [
     title: "Project Maintainer",
     avatar: {
       src: TeamImg4,
-      width: 580,
+      width: 280,
       height: 580,
     },
   },
@@ -46,16 +47,16 @@ const team = [
 			<strong><a href="https://github.com/Astrodevil/resource-gallery/issues">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as early contributor🎉</p>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
+      <h2 class="font-bold text-3xl text-gray-800 ml-12 pl-10">
         Empowering the learners with resources & tools.
       </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
+      <p class="text-lg leading-relaxed text-slate-500 mt-4 text-center">
         We're a multi-cultural team from around the world! We come from diverse
         backgrounds, bringing different personalities, experiences and skills to
         the job. This is what makes our team so special.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+    <div class=" grid justify-center  md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-12 w-96">
       {
         team.map((item) => (
           <div class="group">
@@ -67,7 +68,7 @@ const team = [
                 widths={[200, 400]}
                 aspectRatio="1:1"
                 sizes="(max-width: 800px) 100vw, 400px"
-                class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+                class="w-full h-full object-cover rounded-full transition  group-hover:-translate-y-1 group-hover:shadow-xl"
                 format="avif"
               />
             </div>
@@ -89,6 +90,7 @@ const team = [
 		padding: 1.5rem;
 		max-width: 120ch;
 	}
+  
 	h1 {
 		font-size: 3rem;
 		font-weight: 800;
@@ -107,7 +109,8 @@ const team = [
 		border: 1px solid rgba(var(--accent), 25%);
 		background-color: white;
 		padding: 1rem;
-		border-radius: 0.4rem;
+		border-radius: 0.4rem; 
+    text-align:center;
 	}
 	.instructions code {
 		font-size: 0.875em;
