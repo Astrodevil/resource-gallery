@@ -1,162 +1,181 @@
 ---
-import Card from '../components/card.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Card from "../components/card.astro";
+import Layout from "../layouts/Layout.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title="Resources | Resource Gallery">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Resource Gallery</span></h1>
-		<p class="instructions">
-			To contribute, open the directory <code><a href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages">src/pages</a></code> on GitHub.<br />
-			<strong><a href="https://github.com/Astrodevil/resource-gallery/issues">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as early contributor🎉</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="/opensource"
-				target="_blank"
-				title="Open Source"
-				body="Learn basics of open source with articles, videos and code resources."
-			/>
-			<Card
-			  href="/javascript"
-			  target="_blank"
-			  title="JavaScript"
-			  body="JavaScript is omnipresent, be it front-end, back-end, or full stack. Learn modern JavaScript now."
-		  />
-			<Card
-				href="/webdev"
-				target="_blank"
-				title="Web Dev"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="AI/ML"
-				body="Explore the latest trends in AI and ML, and learn how to apply them to your work."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				target="_blank"
-				title="Data Structures"
-				body="Come say hi to our amazing Discord community."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Android"
-				body="Learn the skills you need to create beautiful, functional, and user-friendly Android apps."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="DevOps"
-				body="Learn DevOps and become a valuable asset to any organization.."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Flutter"
-				body="Powerful and versatile framework for developing cross-platform apps."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="APIs"
-				body="Access the APIs to get the data you need, when you need it."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Git"
-				body="With Git, you can keep your code organized and under control. Learn how to use it efficiently."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Frameworks"
-				body="Explore various frameworks to enhance your development skills."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Python"
-				body="These resources will help you learn Python from the basics to advanced topics."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="SQL"
-				body="SQL resources for beginners, intermediate, and advanced developers."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				target="_blank"
-				title="Java"
-				body="Learn Java with these comprehensive resources."
-			/>
-		</ul>
-	</main>
-	
+  <main>
+    <h1>Welcome to <span class="text-gradient">Resource Gallery</span></h1>
+    <p class="instructions">
+      To contribute, open the directory <code
+      ><a
+      href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages"
+      >src/pages</a
+      ></code
+      > on GitHub.<br />
+      <strong
+      ><a href="https://github.com/Astrodevil/resource-gallery/issues"
+      >Open Issue:</a
+      ></strong
+      > Improve the "Resource Gallery" and earn credits as early contributor🎉
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card
+      href="/opensource"
+      target="_blank"
+      title="Open Source"
+      body="Learn basics of open source with articles, videos and code resources."
+      />
+      <Card
+      href="/javascript"
+      target="_blank"
+      title="JavaScript"
+      body="JavaScript is omnipresent, be it front-end, back-end, or full stack. Learn modern JavaScript now."
+      />
+      <Card
+        href="/computer_networks"
+        target="_blank"
+        title="Computer Networks"
+        body="Learn about computer networks with these comprehensive resources."
+      />
+      <Card
+        href="/webdev"
+        target="_blank"
+        title="Web Dev"
+        body="Supercharge your project with new frameworks and libraries."
+      />
+      <Card
+        href="https://astro.build/themes/"
+        target="_blank"
+        title="AI/ML"
+        body="Explore the latest trends in AI and ML, and learn how to apply them to your work."
+      />
+      <Card
+        href="https://astro.build/chat/"
+        target="_blank"
+        title="Data Structures"
+        body="Come say hi to our amazing Discord community."
+      />
+      <Card
+        href="https://astro.build/themes/"
+        target="_blank"
+        title="Android"
+        body="Learn the skills you need to create beautiful, functional, and user-friendly Android apps."
+      />
+      <Card
+        href="https://astro.build/themes/"
+        target="_blank"
+        title="DevOps"
+        body="Learn DevOps and become a valuable asset to any organization.."
+      />
+      <Card
+        href="https://astro.build/themes/"
+        target="_blank"
+        title="Flutter"
+        body="Powerful and versatile framework for developing cross-platform apps."
+      />
+      <Card
+        href="https://astro.build/themes/"
+        target="_blank"
+        title="APIs"
+        body="Access the APIs to get the data you need, when you need it."
+      />
+      <Card
+        href="/git"
+        target="_blank"
+        title="Git"
+        body="With Git, you can keep your code organized and under control. Learn how to use it efficiently."
+      />
+      <Card
+        href="/frameworks"
+        target="_blank"
+        title="Frameworks"
+        body="Explore various frameworks to enhance your development skills."
+      />
+      <Card
+        href="/python"
+        target="_blank"
+        title="Python"
+        body="These resources will help you learn Python from the basics to advanced topics."
+      />
+      <Card
+        href="https://astro.build/themes/"
+        target="_blank"
+        title="SQL"
+        body="SQL resources for beginners, intermediate, and advanced developers."
+      />
+      <Card
+        href="https://astro.build/themes/"
+        target="_blank"
+        title="Java"
+        body="Learn Java with these comprehensive resources."
+      />
+    </ul>
+  </main>
+
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 120ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 120ch;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
 
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #000000 30%, rgb(255, 255, 255) 60%);
-	}
-	/* html {
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #000000 30%,
+      rgb(255, 255, 255) 60%
+    );
+  }
+  /* html {
 		font-family: system-ui, sans-serif;
 		background-color: #F6F6F6;
 	} */
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
 </style>
-

@@ -1,0 +1,96 @@
+---
+import Card from "../components/card.astro";
+import Layout from "../layouts/Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title="Resources | Resource Gallery">
+  <main>
+    <h1>Resource Gallery - <span class="text-gradient">Git</span></h1>
+    <p class="instructions">
+      To contribute, open the directory <code
+        ><a
+          href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages"
+          >src/pages</a
+        ></code
+      > on GitHub.<br />
+      <strong
+        ><a href="https://github.com/Astrodevil/resource-gallery/issues"
+          >Open Issue:</a
+        ></strong
+      > Improve the "Resource Gallery" and earn credits as early contributor🎉
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://git-scm.com/docs/git#_git_commands"
+        target="_blank"
+        title="Git - the stupid content tracker (Docs)"
+        body="Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals."
+      />
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 120ch;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #000000 30%,
+      rgb(255, 255, 255) 60%
+    );
+  }
+  /* html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	} */
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+</style>
