@@ -4,6 +4,7 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import { Picture } from "@astrojs/image/components";
 
+
 const TeamImg1 =
   "https://cdn.bio.link/uploads/profile_pictures/2021-12-17/rIgWZLgFZMi84ZKzAZ2Rw3K2PbIJ5PJk.png";
 const TeamImg2 =
@@ -23,6 +24,8 @@ const team = [
       height: 580,
      
     },
+      linkedin: "https://www.linkedin.com/in/amitesh1208/",
+    github: "https://github.com/Astrodevil"
   },
   {
     name: "Bharti Kumari",
@@ -32,10 +35,10 @@ const team = [
       width: 280,
       height: 580,
     },
+     linkedin: "https://www.linkedin.com/in/bhartik021/",
+    github: "https://github.com/bhartik021"
   },
 ];
----
-
 <Layout title="About">
   <Container>
     <Sectionhead>
@@ -58,7 +61,7 @@ const team = [
     </div>
     <div class=" grid justify-center  md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-12 w-96">
       {
-        team.map((item) => (
+  team.map((item) => (
           <div class="group">
             <div class="w-full aspect-square">
               <Picture
@@ -73,15 +76,52 @@ const team = [
               />
             </div>
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800"> {item.name}</h2>
-              <h3 class="text-sm text-slate-500"> {item.title}</h3>
-            </div>
-          </div>
-        ))
-      }
+  team.map((item) => (
+    <div class="group">
+      <div class="w-full aspect-square">
+        <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
+          <Picture
+            {...item.avatar}
+            format="avif"
+            alt="Team"
+            widths={[200, 400]}
+            aspectRatio="1:1"
+            sizes="(max-width: 800px) 100vw, 400px"
+            class="w-full h-full object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+            format="avif"
+          />
+        </a>
+      </div>
+
+      <div class="mt-4 text-center">
+        <h2 class="text-lg text-gray-800"> {item.name}</h2>
+        <h3 class="text-sm text-slate-500"> {item.title}</h3>
+                      
+                      <div class="flex justify-center mt-2">
+
+                   <a href={item.github} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
+                    alt="GitHub"
+                    class="w-6 h-6 mr-2 social-icon"
+                  />
+                </a>
+                <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Icon-Logo.wine.svg"
+                    alt="LinkedIn"
+                    class="w-7 h-7 social-icon"
+                  />
+                </a>
+              </div>
+      </div>
     </div>
-  </Container>
+  ))
+}
+
+
+    </div>
+  </Container>  
 </Layout>
 
 <style>
@@ -120,6 +160,13 @@ const team = [
 		border-radius: 4px;
 		padding: 0.3em 0.45em;
 	}
+  .social-icon {
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+  }
+  .social-icon:hover {
+    transform: translateY(-0.5rem);
+  }
 	.instructions strong {
 		color: rgb(var(--accent));
 	}
