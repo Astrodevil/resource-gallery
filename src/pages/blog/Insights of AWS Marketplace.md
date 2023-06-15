@@ -155,6 +155,6 @@ For buyers, AWS Marketplace provides a diverse selection of third-party software
 
 **If you would like to contact me,**
 
-[LinkedIn](https://www.linkedin.com/in/parmesh-bhatt-277971221/)\*\*
+[LinkedIn](https://www.linkedin.com/in/parmesh-bhatt-277971221/)
 [Twitter](https://twitter.com/Parmesh_119)
 [GitHub](https://github.com/Parmesh119)
