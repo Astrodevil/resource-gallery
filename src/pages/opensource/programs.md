@@ -15,3 +15,8 @@ tags: [opensource,programs]
 
 ## [Hacktoberfest](https://hacktoberfest.com/)
 
+## [MLH Fellowship](https://fellowship.mlh.io/)
+
+## [Outreachy](https://www.outreachy.org/)
+
+## [Season of KDE](https://season.kde.org/)
