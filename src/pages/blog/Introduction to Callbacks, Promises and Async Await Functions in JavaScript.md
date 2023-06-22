@@ -28,31 +28,31 @@ In JavaScript, code execution is typically synchronous. However, there are cases
 In JavaScript, functions can be passed as arguments to other functions. A callback is simply a function that is passed as an argument to another function and gets executed after the main function has completed its task. Let's understand callback functions from the examples.
 
 **Simple Code**
-
+```
 function greet(name, callback) {
-console.log("Hello, " + name + "!");
-callback();
+     console.log("Hello, " + name + "!");
+     callback();
 }
 function sayGoodbye() {
-console.log("Goodbye!");
+     console.log("Goodbye!");
 }
 greet("Divesh", sayGoodbye);
-
+```
 In this example, we have a function called greet that takes two arguments: name and callback. It logs a greeting message with the provided name and then executes the callback function. We also have a separate function called sayGoodbye that simply logs "Goodbye!".
 
 But one of the major drawbacks of a callback is callback hell. A Callback hell occurs when multiple asynchronous operations are nested within each other using callbacks, resulting in deeply nested and hard-to-read code. This nesting can make the code difficult to maintain, debug, and understand. It becomes challenging to handle errors and manage the flow of execution.
 
 **Example of Callback hell :**
-
+```
 const cart = ['item1', 'item2', 'item3']; // array of items
 createOrder(cart, function (){
-proceedPayment( function (){
-showOrderSummary( function(){  
- updateWallet()
+     proceedPayment( function (){
+          showOrderSummary( function(){  
+               updateWallet()
+          })
+     })
 })
-})
-})
-
+```
 In the above dummy example, all the functions are interdependent. proceedPayment should work only after the order is created by createOrder. showOrderSummary should only happen after the payment is done by proceedPayment. updateWallet should only work after we get the order summary from showOrderSummary. Each function is taking another function as a callback.
 
 This causes a pyramid of doom structure causing our code to grow horizontally, making it tough to manage our code.
@@ -78,13 +78,14 @@ Let's understand these aspects in more detail.
 To create a promise, you use the Promise constructor, which takes a function (often called the "executor") as an argument. The executor function receives two parameters: resolve and reject. Inside the executor function, you perform your asynchronous task and call either resolve or reject based on the outcome.
 
 **Here's an example of creating a promise that simulates fetching data from a server:**
-
+```
 const fetchData = new Promise((resolve, reject) => {
-setTimeout(() => {
-const data = { id: 1, name: "John Doe" };
-resolve(data);
+     setTimeout(() => {
+          const data = { id: 1, name: "John Doe" };
+          resolve(data);
 }, 2000);
 });
+```
 
 **Handling Promises**
 
@@ -95,7 +96,7 @@ The then() method is used to handle the fulfilled promise and takes a callback f
 The catch() method is used to handle a rejected promise and takes a callback function as an argument. The reason or error associated with the rejected promise is passed as an argument to this callback.
 
 **Here's an example of using then() and catch() with the fetchData promise:**
-
+```
 fetchData
 .then((data) => {
 // Handle the fulfilled promise (access the resolved value)
@@ -105,26 +106,26 @@ console.log("Fetched data:", data);
 // Handle the rejected promise (access the error)
 console.log("Error:", error);
 });
-
+```
 **Chaining Promises**
 
 Promises can be chained together using then() to create a sequence of asynchronous operations. Each then() callback returns a new promise, allowing you to handle the result of the previous operation and continue with the next one. By chaining promises, you can create a more sequential and readable flow of asynchronous operations.
-
+```
 fetchData
 .then((data) => {
 // Handle the first fulfilled promise
-console.log("Fetched data:", data);
-return someOtherAsyncTask(); // Return a new promise
+     console.log("Fetched data:", data);
+     return someOtherAsyncTask(); // Return a new promise
 })
 .then((result) => {
 // Handle the result of the second fulfilled promise
-console.log("Second async task result:", result);
+     console.log("Second async task result:", result);
 })
 .catch((error) => {
 // Handle any errors in the chain
-console.log("Error:", error);
+     console.log("Error:", error);
 });
-
+```
 The thing is, chaining promises together just like callbacks can get pretty bulky and confusing. One interesting thing about promises is that we cannot store a promise into a variable. But async-await can make it possible. Here is why Async and Await were brought about.
 
 **Async/Await**
@@ -137,25 +138,26 @@ Before async/await, developers had to use callbacks or Promises to handle asynch
 
 Let's see what are these async and await keywords used for.
 
-**_async:_**It ensures that the function returns a promise, and wraps non-promises in it.
+***async***: It ensures that the function returns a promise, and wraps non-promises in it.
 
-**_await:_**It makes JavaScript wait until that promise settles and returns its result.
+***await***: It makes JavaScript wait until that promise settles and returns its result.
 
 _Note: await keyword works only inside async functions_
 
 **Let's consider an example where we fetch user data from an API asynchronously using the fetch() function:**
-
+```
 async function fetchUserData() {
-try {
-const response = await fetch('https://api.example.com/users');
-const data = await response.json();
-console.log('Fetched user data:', data);
-} catch (error) {
-console.log('Error fetching user data:', error);
-}
+     try {
+          const response = await                       
+          fetch('https://api.example.com/users');
+          const data = await response.json();
+          console.log('Fetched user data:', data);
+     } catch (error) {
+          console.log('Error fetching user data:', error);
+     }
 }
 fetchUserData();
-
+```
 _We declare an async function fetchUserData(). Inside this function, we make an asynchronous HTTP request to the API endpoint using the fetch() function. The fetch() function returns a promise that resolves to a response object._
 
 _We use the await keyword to pause the execution and wait for the promise returned by fetch() to resolve. The resolved value, the response object, is stored in the response variable._
