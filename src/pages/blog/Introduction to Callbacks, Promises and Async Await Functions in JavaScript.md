@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Callbacks, Promises and Async/Await Functions in JavaScript"
 excerpt: "In this blog, we will be discussing callbacks, promises and async/await functions in javascript also we will be learning about synchronous and asynchronous programming languages. If you're new to JavaScript programming, or even if you've been working with the language for a while, you may have heard these terms thrown around. Today we will be discussing each of these terms in detail.😀"
-publishDate: "2022-12-05"
+publishDate: "2023-05-26"
 image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1685114174416/69babf6a-1893-482c-82d5-4caa634b2af4.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"
 category: "JavaScript"
 author: "Divesh Mahajan"
