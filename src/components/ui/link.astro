@@ -1,8 +1,10 @@
 ---
 interface Props {
   href: string;
+  target:string;
   size?: "md" | "lg";
   block?: boolean;
+
   style?: "outline" | "primary" | "inverted" | "muted";
   class?: string;
   [x: string]: any;
@@ -11,6 +13,7 @@ interface Props {
 const {
   href,
   block,
+  target="_blank",
   size = "lg",
   style = "primary",
   class: className,
@@ -31,7 +34,9 @@ const styles = {
 ---
 
 <a
+ 
   href={href}
+  target={target}
   {...rest}
   class:list={[
     "rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200",
