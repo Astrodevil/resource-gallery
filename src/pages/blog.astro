@@ -75,7 +75,21 @@ console.log(posts[0].frontmatter.image);
         										input.select();
         										document.execCommand('copy');
         										document.body.removeChild(input);
-        										alert('URL copied to clipboard!');
+        										const popup = document.createElement('div');
+    											popup.textContent = 'Link successfully copied';
+    											popup.style.position = 'fixed';
+    											popup.style.bottom = '20px';
+    											popup.style.left = '50%';
+    											popup.style.transform = 'translateX(-50%)';
+    											popup.style.padding = '10px 20px';
+    											popup.style.backgroundColor = '#fff';
+    											popup.style.border = '1px solid #ccc';
+    											popup.style.borderRadius = '4px';
+    											popup.style.zIndex = '9999';
+    											document.body.appendChild(popup);
+    											setTimeout(function() {
+      												document.body.removeChild(popup);
+    											}, 1000);
       										})();`}>
 												<i
 													class="fa fa-share-alt"
