@@ -48,8 +48,8 @@ console.log(posts[0].frontmatter.image);
 				{
 					posts.map((post, index) => (
 						<li>
-							<a href={post.url}>
-								<div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+							<div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+								<a href={post.url}>
 									<Picture
 										src={post.frontmatter.image}
 										widths={[200, 400, 800]}
@@ -59,16 +59,17 @@ console.log(posts[0].frontmatter.image);
 										loading={index === 0 ? "eager" : "lazy"}
 										class="w-full rounded-md aspect-video"
 									/>
+								</a>
 
-									<div>
-										<div class="flex gap-2 mt-0">
-											<span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-												{post.frontmatter.category}
-											</span>
-											<div
-												class="text-1xl"
-												style="text-align: center; z-index:1; margin-top: -3px"
-												onclick={`(function() {
+								<div>
+									<div class="flex gap-2 mt-0">
+										<span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+											{post.frontmatter.category}
+										</span>
+										<div
+											class="text-1xl"
+											style="text-align: center; z-index:1; margin-top: -3px"
+											onclick={`(function() {
         										const input = document.createElement('textarea');
         										input.value = 'https://resourcegallery.live/${post.url}';
         										document.body.appendChild(input);
@@ -76,7 +77,7 @@ console.log(posts[0].frontmatter.image);
         										document.execCommand('copy');
         										document.body.removeChild(input);
         										const popup = document.createElement('div');
-    											popup.textContent = 'Link successfully copied';
+    											popup.textContent = 'Link successfully copied!';
     											popup.style.position = 'fixed';
     											popup.style.bottom = '20px';
     											popup.style.left = '50%';
@@ -91,13 +92,14 @@ console.log(posts[0].frontmatter.image);
       												document.body.removeChild(popup);
     											}, 1000);
       										})();`}>
-												<i
-													class="fa fa-share-alt"
-													aria-hidden="true"
-												/>
-											</div>
+											<i
+												class="fa fa-share-alt"
+												aria-hidden="true"
+											/>
 										</div>
+									</div>
 
+									<a href={post.url}>
 										<h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
 											{post.frontmatter.title}
 										</h2>
@@ -119,9 +121,9 @@ console.log(posts[0].frontmatter.image);
 												)}
 											</time>
 										</div>
-									</div>
+									</a>
 								</div>
-							</a>
+							</div>
 						</li>
 					))
 				}
