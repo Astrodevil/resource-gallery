@@ -3,74 +3,133 @@ import { Picture } from "@astrojs/image/components";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
-import Card from '../components/card.astro';
+import Card from "../components/card.astro";
 import { getFormattedDate } from "@utils/all";
 import { log } from "astro/dist/core/logger/core";
-import { Tweet, Vimeo, YouTube } from 'astro-embed';
+import { Tweet, Vimeo, YouTube } from "astro-embed";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-  (a, b) =>
-    new Date(b.frontmatter.publishDate).valueOf() -
-    new Date(a.frontmatter.publishDate).valueOf()
+	(a, b) =>
+		new Date(b.frontmatter.publishDate).valueOf() -
+		new Date(a.frontmatter.publishDate).valueOf()
 );
 console.log(posts[0].frontmatter.image);
 ---
 
 <Layout title="Blog">
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title"><span class="text-gradient">Our Blog</span></Fragment>
-      <Fragment slot="desc">Our contributors write about topics and discussions around the tech world.</Fragment>
-    </Sectionhead>
+	<Container>
+		<Sectionhead>
+			<Fragment slot="title">
+				<span class="text-gradient">Our Blog</span>
+			</Fragment>
+			<Fragment slot="desc">
+				Our contributors write about topics and discussions around the
+				tech world.
+			</Fragment>
+		</Sectionhead>
 		<p class="instructions">
-			To contribute, open the directory <code><a href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages/blog">src/pages/blog</a></code> on GitHub. <br />We are working on fixing canonical URLs.  This will help you share your blogs on <strong>Resource Gallery</strong> without creating any SEO problems for your original blog.<br />
-			<strong><a href="https://github.com/Astrodevil/resource-gallery/issues">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as early contributor🎉</p>
-    <main class="mt-16">
-      <ul class="grid gap-16 max-w-4xl mx-auto">
-        {
-          posts.map((post, index) => (
-            <li>
-              <a href={post.url}>
-                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-                  <Picture
-                    src={post.frontmatter.image}
-                    widths={[200, 400, 800]}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    aspectRatio="16:9"
-                    alt="Thumbnail"
-                    loading={index === 0 ? "eager" : "lazy"}
-                    class="w-full rounded-md aspect-video"
-                  />
-                  <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {post.frontmatter.category}
-                    </span>
+			To contribute, open the directory <code
+				><a
+					href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages/blog"
+					>src/pages/blog</a
+				></code
+			> on GitHub. <br />We are working on fixing canonical URLs. This
+			will help you share your blogs on <strong>Resource Gallery</strong> without
+			creating any SEO problems for your original blog.<br />
+			<strong
+				><a href="https://github.com/Astrodevil/resource-gallery/issues"
+					>Open Issue:</a
+				></strong
+			> Improve the "Resource Gallery" and earn credits as early contributor🎉
+		</p>
+		<main class="mt-16">
+			<ul class="grid gap-16 max-w-4xl mx-auto">
+				{
+					posts.map((post, index) => (
+						<li>
+							<div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+								<a href={post.url}>
+									<Picture
+										src={post.frontmatter.image}
+										widths={[200, 400, 800]}
+										sizes="(max-width: 800px) 100vw, 800px"
+										aspectRatio="16:9"
+										alt="Thumbnail"
+										loading={index === 0 ? "eager" : "lazy"}
+										class="w-full rounded-md aspect-video"
+									/>
+								</a>
 
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-                      {post.frontmatter.title}
-                    </h2>
+								<div>
+									<div class="flex gap-2 mt-0">
+										<span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+											{post.frontmatter.category}
+										</span>
+										<div
+											class="text-1xl"
+											style="text-align: center; z-index:1; margin-top: -3px"
+											onclick={`(function() {
+        										const input = document.createElement('textarea');
+        										input.value = 'https://resourcegallery.live/${post.url}';
+        										document.body.appendChild(input);
+        										input.select();
+        										document.execCommand('copy');
+        										document.body.removeChild(input);
+        										const popup = document.createElement('div');
+    											popup.textContent = 'Link successfully copied!';
+    											popup.style.position = 'fixed';
+    											popup.style.bottom = '20px';
+    											popup.style.left = '50%';
+    											popup.style.transform = 'translateX(-50%)';
+    											popup.style.padding = '10px 20px';
+    											popup.style.backgroundColor = '#fff';
+    											popup.style.border = '1px solid #ccc';
+    											popup.style.borderRadius = '4px';
+    											popup.style.zIndex = '9999';
+    											document.body.appendChild(popup);
+    											setTimeout(function() {
+      												document.body.removeChild(popup);
+    											}, 1000);
+      										})();`}>
+											<i
+												class="fa fa-share-alt"
+												aria-hidden="true"
+											/>
+										</div>
+									</div>
 
-                    <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
-                        {post.frontmatter.author}
-                      </span>
-                      <span class="text-gray-400">• </span>
-                      <time
-                        class="text-gray-400"
-                        datetime={post.frontmatter.publishDate}>
-                        {getFormattedDate(post.frontmatter.publishDate)}
-                      </time>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </main>
-  </Container>
+									<a href={post.url}>
+										<h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+											{post.frontmatter.title}
+										</h2>
+
+										<div class="flex gap-2 mt-3">
+											<span class="text-gray-400">
+												{post.frontmatter.author}
+											</span>
+											<span class="text-gray-400">
+												•{" "}
+											</span>
+											<time
+												class="text-gray-400"
+												datetime={
+													post.frontmatter.publishDate
+												}>
+												{getFormattedDate(
+													post.frontmatter.publishDate
+												)}
+											</time>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</main>
+	</Container>
 </Layout>
 
 <style>
@@ -119,7 +178,12 @@ console.log(posts[0].frontmatter.image);
 
 	:root {
 		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #000000 30%, rgb(255, 255, 255) 60%);
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			#000000 30%,
+			rgb(255, 255, 255) 60%
+		);
 	}
 	/* html {
 		font-family: system-ui, sans-serif;
