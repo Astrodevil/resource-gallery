@@ -4,15 +4,13 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import { Picture } from "@astrojs/image/components";
 
-
 const TeamImg1 =
   "https://cdn.bio.link/uploads/profile_pictures/2021-12-17/rIgWZLgFZMi84ZKzAZ2Rw3K2PbIJ5PJk.png";
 const TeamImg2 =
   "https://images.unsplash.com/photo-1633332755192-727a05c4013d?&fit=crop&w=280";
 const TeamImg3 =
   "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?&fit=crop&w=280";
-  const TeamImg4 =
-  "https://bhartik021.github.io/linktree/assets/my-Image.jpg";
+const TeamImg4 = "https://bhartik021.github.io/linktree/assets/my-Image.jpg";
 
 const team = [
   {
@@ -23,8 +21,8 @@ const team = [
       width: 580,
       height: 580,
     },
-      linkedin: "https://www.linkedin.com/in/amitesh1208/",
-    github: "https://github.com/Astrodevil"
+    linkedin: "https://www.linkedin.com/in/amitesh1208/",
+    github: "https://github.com/Astrodevil",
   },
   {
     name: "Bharti Kumari",
@@ -34,22 +32,39 @@ const team = [
       width: 580,
       height: 580,
     },
-     linkedin: "https://www.linkedin.com/in/bhartik021/",
-    github: "https://github.com/bhartik021"
+    linkedin: "https://www.linkedin.com/in/bhartik021/",
+    github: "https://github.com/bhartik021",
   },
 ];
 
+const res = await fetch(
+  "https://api.github.com/repos/ZeroOctave/resource-gallery/contributors?per_page=100"
+).then((response) => response.json());
 ---
 
 <Layout title="About">
   <Container>
     <Sectionhead>
       <Fragment slot="title"><span class="text-gradient">About</span></Fragment>
-      <Fragment slot="desc">Our team consists of each contributor improving the <strong>Resource Gallery</strong>.</Fragment>
+      <Fragment slot="desc">
+        Our team consists of each contributor improving the <strong
+          >Resource Gallery</strong
+        >.
+      </Fragment>
     </Sectionhead>
     <p class="instructions">
-			To add your profile, after contribution open the directory <code><a href="https://github.com/Astrodevil/resource-gallery/blob/main/src/pages/about.astro">src/pages/about</a></code> on GitHub.<br />
-			<strong><a href="https://github.com/Astrodevil/resource-gallery/issues">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as early contributor🎉</p>
+      To add your profile, after contribution open the directory <code
+        ><a
+          href="https://github.com/Astrodevil/resource-gallery/blob/main/src/pages/about.astro"
+          >src/pages/about</a
+        ></code
+      > on GitHub.<br />
+      <strong
+        ><a href="https://github.com/Astrodevil/resource-gallery/issues"
+          >Open Issue:</a
+        ></strong
+      > Improve the "Resource Gallery" and earn credits as early contributor🎉
+    </p>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">
@@ -63,37 +78,39 @@ const team = [
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
-  team.map((item) => (
-    <div class="group">
-      <div class="w-full aspect-square">
-        <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
-          <Picture
-            {...item.avatar}
-            format="avif"
-            alt="Team"
-            widths={[200, 400]}
-            aspectRatio="1:1"
-            sizes="(max-width: 800px) 100vw, 400px"
-            class="w-full h-full object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-            format="avif"
-          />
-        </a>
-      </div>
+        team.map((item) => (
+          <div class="group">
+            <div class="w-full aspect-square">
+              <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
+                <Picture
+                  {...item.avatar}
+                  format="avif"
+                  alt="Team"
+                  widths={[200, 400]}
+                  aspectRatio="1:1"
+                  sizes="(max-width: 800px) 100vw, 400px"
+                  class="w-full h-full object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                  format="avif"
+                />
+              </a>
+            </div>
 
-      <div class="mt-4 text-center">
-        <h2 class="text-lg text-gray-800"> {item.name}</h2>
-        <h3 class="text-sm text-slate-500"> {item.title}</h3>
-                      
-                      <div class="flex justify-center mt-2">
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800"> {item.name}</h2>
+              <h3 class="text-sm text-slate-500"> {item.title}</h3>
 
-                   <a href={item.github} target="_blank" rel="noopener noreferrer">
+              <div class="flex justify-center mt-2">
+                <a href={item.github} target="_blank" rel="noopener noreferrer">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
                     alt="GitHub"
                     class="w-6 h-6 mr-2 social-icon"
                   />
                 </a>
-                <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={item.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <img
                     src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Icon-Logo.wine.svg"
                     alt="LinkedIn"
@@ -101,17 +118,44 @@ const team = [
                   />
                 </a>
               </div>
-      </div>
+            </div>
+          </div>
+        ))
+      }
     </div>
-  ))
-}
 
+    <p class="text-3xl font-semibold text-center py-10">Our team</p>
+    <div class="w-[100%] flex flex-wrap justify-around gap-y-8">
+      {
+        res?.map((team, i) => (
+          <div
+            key={i}
+            class="w-[90%] sm:w-[45%] lg:w-[26%] space-y-3 rounded-lg flex flex-col justify-center items-center border border-black px-10 py-6 hover:scale-105 ease-in-out shadow-xl">
+            <img
+              src={team.avatar_url}
+              alt={team.login}
+              class="rounded-full w-[80%]"
+            />
+            <p class="text-xl font-semibold">{team.login}</p>
+            <p class="text-base">{team.contributions} commits</p>
+            <a
+              href={team.html_url}
+              class="w-full"
+              target="_blank"
+              rel="noreferrer">
+              <button class="text-base text-white bg-violet-700 w-[100%] rounded-md py-1 hover:bg-transparent hover:border-violet-700 border-2 hover:text-black">
+                Profile
+              </button>
+            </a>
+          </div>
+        ))
+      }
     </div>
-  </Container>  
+  </Container>
 </Layout>
 
 <style>
-	/* main {
+  /* main {
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 120ch;
@@ -121,29 +165,29 @@ const team = [
 		font-weight: 800;
 		margin: 0;
 	} */
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
   .social-icon {
     margin-right: 1rem;
     transition: transform 0.3s ease;
@@ -151,21 +195,26 @@ const team = [
   .social-icon:hover {
     transform: translateY(-0.5rem);
   }
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	/* .link-card-grid {
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  /* .link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
 	} */
 
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #000000 30%, rgb(255, 255, 255) 60%);
-	}
-	/* html {
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #000000 30%,
+      rgb(255, 255, 255) 60%
+    );
+  }
+  /* html {
 		font-family: system-ui, sans-serif;
 		background-color: #F6F6F6;
 	}
