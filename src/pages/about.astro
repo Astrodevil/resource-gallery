@@ -40,6 +40,13 @@ const team = [
 const res = await fetch(
   "https://api.github.com/repos/ZeroOctave/resource-gallery/contributors?per_page=100"
 ).then((response) => response.json());
+
+const contributors = res.filter((contributor) => {
+  return (
+    !contributor.login.includes("Astrodevil") &&
+    !contributor.login.includes("bhartik021")
+  );
+});
 ---
 
 <Layout title="About">
@@ -76,11 +83,13 @@ const res = await fetch(
         the job. This is what makes our team so special.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+
+    <div
+      class="w-[100%] flex flex-col md:flex-row justify-evenly items-center gap-10 mt-12">
       {
         team.map((item) => (
-          <div class="group">
-            <div class="w-full aspect-square">
+          <div class="w-[80%] sm:w-[25%] rounded-lg flex flex-col justify-center items-center border border-black px-10 py-4 hover:scale-105 linear shadow-xl">
+            <div class="">
               <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
                 <Picture
                   {...item.avatar}
@@ -89,12 +98,11 @@ const res = await fetch(
                   widths={[200, 400]}
                   aspectRatio="1:1"
                   sizes="(max-width: 800px) 100vw, 400px"
-                  class="w-full h-full object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                  class="w-full h-full object-cover transition group-hover:-translate-y-1 group-hover:shadow-xl rounded-full"
                   format="avif"
                 />
               </a>
             </div>
-
             <div class="mt-4 text-center">
               <h2 class="text-lg text-gray-800"> {item.name}</h2>
               <h3 class="text-sm text-slate-500"> {item.title}</h3>
@@ -124,32 +132,34 @@ const res = await fetch(
       }
     </div>
 
-    <p class="text-3xl font-semibold text-center py-10">Our team</p>
-    <div class="w-[100%] flex flex-wrap justify-around gap-y-8">
-      {
-        res?.map((team, i) => (
-          <div
-            key={i}
-            class="w-[90%] sm:w-[45%] lg:w-[26%] space-y-3 rounded-lg flex flex-col justify-center items-center border border-black px-10 py-6 hover:scale-105 ease-in-out shadow-xl">
-            <img
-              src={team.avatar_url}
-              alt={team.login}
-              class="rounded-full w-[80%]"
-            />
-            <p class="text-xl font-semibold">{team.login}</p>
-            <p class="text-base">{team.contributions} commits</p>
-            <a
-              href={team.html_url}
-              class="w-full"
-              target="_blank"
-              rel="noreferrer">
-              <button class="text-base text-white bg-violet-700 w-[100%] rounded-md py-1 hover:bg-transparent hover:border-violet-700 border-2 hover:text-black">
-                Profile
-              </button>
-            </a>
-          </div>
-        ))
-      }
+    <div class="md:mx-16">
+      <p class="text-3xl font-semibold text-center py-10">Our Contributors</p>
+      <div class="w-[100%] flex flex-wrap justify-around gap-y-8">
+        {
+          contributors?.map((team, i) => (
+            <div
+              key={i}
+              class="w-[80%] sm:w-[40%] lg:w-[26%] rounded-lg flex flex-col justify-center items-center border border-black px-10 py-4 hover:scale-105 ease-in-out shadow-xl">
+              <img
+                src={team.avatar_url}
+                alt={team.login}
+                class="rounded-full w-[80%]"
+              />
+              <p class="text-xl font-semibold pt-2">{team.login}</p>
+              <p class="text-base">{team.contributions} commits</p>
+              <a
+                href={team.html_url}
+                class="w-full mt-4"
+                target="_blank"
+                rel="noreferrer">
+                <button class="text-base text-white bg-black w-[100%] rounded-md py-1 hover:bg-slate-800">
+                  Profile
+                </button>
+              </a>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </Container>
 </Layout>
