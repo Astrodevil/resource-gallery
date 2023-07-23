@@ -17,6 +17,8 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 console.log(posts[0].frontmatter.image);
 ---
 
+
+
 <Layout title="Blog">
 	<Container>
 		<Sectionhead>
