@@ -8,11 +8,13 @@ author: "Himanshu Narware"
 layout: "@layouts/BlogLayout.astro"
 tags: [AI, Human, Jobs]
 ---
+
 Artificial Intelligence is the latest technology buzz topic thanks to the boom of ChatGPT. The AI-powered chatbot, created by Microsoft-backed OpenAI, has both impressed and shocked with its ability to answer questions, write essays and even argue legal cases.
 
 Its capabilities have also put another topic at the forefront of people’s minds: if, how and when artificial intelligence might impact their jobs and careers. And while concerns about AI-based technology taking over people’s jobs have spiraled, experts say it’s not quite that simple.
 
 ## Replacing or creating jobs?
+
 The short answer to the question of whether AI will replace some jobs is a big, fat “yes.”
 
 Developments in artificial intelligence mean that technology can achieve more and more, and that will, of course, impact jobs, Steven Miller, professor emeritus of information systems at Singapore Management University, says.
@@ -25,8 +27,8 @@ On the flipside, tasks that change often and therefore require things like adapt
 
 Jobs with a strong human element — such as being a therapist — are especially unlikely to be taken over by technology, according to Dimitris Papanikloaou, a professor of finance at the Kellogg School of Management at Northwestern University. “Jobs that emphasize interpersonal skills are much harder to be replaced by an AI,” he says.
 
-
 ## New jobs on the horizon?
+
 The concerns aren’t surprising, says Steve Chase, consulting leader at KPMG U.S. “As with most technological advancements, an initial fear of job loss and displacement among workers is natural.”
 
 However, it is crucial to keep several points in mind, he adds. First off, similar disruption has happened before: for example, the spread of computers, or more advanced and specialized machines in factories.
@@ -38,6 +40,7 @@ This is a centuries-old process, Miller says, adding that history shows if jobs 
 “The creation of new jobs resulting from the ability to create and deliver of new types of goods and services … have far outpaced the number of jobs displaced,” he explains.
 
 ## Working with AI, not against it
+
 AI and the technology and products based on it are also still limited in certain ways, Papanikloaou points out.
 
 “I think at the moment we are quite far from ‘real AI’ in the sense that all the models that we have are about predicting the right response given a set of data. Much of what AI does is to synthesize existing knowledge with a specific goal in mind,” he says. “This is quite far from creating new knowledge.”
@@ -52,8 +55,4 @@ To do this successfully, businesses need to adapt, Chase says. This includes edu
 
 So whilst AI algorithms and the technology based on them might not be about to replace people’s jobs, they will likely become a bigger part of everyday working life — potentially sooner rather than later.
 
-
-**Follow Me on [Twitter](https://twitter.com/N_Himanshu_)** 
-**Follow Me on [Linkedin](https://www.linkedin.com/in/himanshunarware/)** 
-
-
+**Follow Me on [Twitter](https://twitter.com/N_Himanshu_/), [Linkedin](https://www.linkedin.com/in/himanshunarware/)**.
