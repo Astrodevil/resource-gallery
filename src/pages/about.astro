@@ -35,6 +35,17 @@ const team = [
     linkedin: "https://www.linkedin.com/in/bhartik021/",
     github: "https://github.com/bhartik021",
   },
+  {
+    name: "Ganesh Mourya",
+    title: "Project Maintainer",
+    avatar: {
+      src: "https://github.com/Alkaison.png",
+      width: 580,
+      height: 580,
+    },
+    linkedin: "https://www.linkedin.com/in/Alkaison/",
+    github: "https://github.com/Alkaison",
+  }
 ];
 
 const res = await fetch(
@@ -44,7 +55,8 @@ const res = await fetch(
 const contributors = res.filter((contributor) => {
   return (
     !contributor.login.includes("Astrodevil") &&
-    !contributor.login.includes("bhartik021")
+    !contributor.login.includes("bhartik021") &&
+    !contributor.login.includes("Alkaison")
   );
 });
 ---
