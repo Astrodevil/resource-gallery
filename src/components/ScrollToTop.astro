@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+import arrowUp from "assets/arrowUp.svg";
+---
+
+<main>
+    <div id="scroll" class="text-4xl fixed bottom-6 right-5 z-10 cursor-pointer text-black bg-gradient-to-r from-[#e8ebf1] to-[#cad0db] px-1 py-2.5  rounded-full transition-all delay-300 ease-in-out hover:scale-110" onclick=`handleScroll()`>
+       <Picture 
+       src={arrowUp}
+       alt="Arrow"
+       widths={[100, 100, 100]}
+       aspectRatio="4:3"
+       sizes="(max-width: 10px) 19vw, 40px"
+       loading="eager"
+       format="avif"
+     />
+    </div>
+</main>
+<script>
+     const scroll = document.getElementById("scroll");
+
+     scroll.addEventListener('click', function(e) {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+     })
+</script>
