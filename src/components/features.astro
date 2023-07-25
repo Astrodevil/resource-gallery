@@ -54,9 +54,9 @@ const features = [
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start hover:bg-black hover:text-white group rounded-md hover:scale-110 duration-200 py-2">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0 transform transition-all duration-700 ">
-          <Icon class="text-white" name={item.icon} />
+      <div class="flex gap-4 items-start hover:bg-black hover:text-white group rounded-md duration-200 py-2">
+        <div class="mt-1 bg-black rounded-full ml-2 p-2 w-8 h-8 shrink-0 transform transition-all duration-700 group-hover:bg-white ">
+          <Icon class="text-white group-hover:text-black" name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
