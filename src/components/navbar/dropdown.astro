@@ -30,12 +30,14 @@ const { title, lastItem, children } = Astro.props;
             : "lg:left-0 origin-top-left",
         ]}>
         <div
-          class="px-3 lg:py-2 lg:bg-white lg:rounded-md lg:shadow lg:border flex flex-col">
+          class="px-3 lg:py-2 bg-slate-300 bg-opacity-100 lg:rounded-md lg:shadow lg:border flex flex-col">
           {
             children.map((item) => (
               <a
                 href={item.path}
-                class="py-1 text-gray-600 hover:text-gray-900">
+                class="py-1 text-blue-600 hover:text-gray-900
+                
+                ">
                 {item.title}
               </a>
             ))
