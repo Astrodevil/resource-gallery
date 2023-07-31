@@ -1,51 +1,61 @@
----
 import Card from '../components/card.astro';
 import Layout from '../layouts/Layout.astro';
 
-
 const { frontmatter } = Astro.props;
----
 
 <Layout title="Resources | Resource Gallery">
 	<main>
 		<h1>Resource Gallery - <span class="text-gradient">JavaScript</span></h1>
 		<p class="instructions">
 			To contribute, open the directory <code><a href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages">src/pages</a></code> on GitHub.<br />
-			<strong><a href="https://github.com/Astrodevil/resource-gallery/issues">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as early contributor🎉</p>
+			<strong><a href="https://github.com/Astrodevil/resource-gallery/issues">Open Issue:</a></strong> Improve the "Resource Gallery" and earn credits as an early contributor🎉</p>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://www.showwcase.com/roadmap/7/javascript-the-complete-guide"
 				target="_blank"
 				title="JavaScript - The Complete Guide (Docs)"
 				body="Learn modern JavaScript from this guided roadmap filled with content, examples, resources, and project ideas. This course is prepared by Showwcase."
-        /> 
+			/> 
 			<Card
 				href="https://mranand.com/series/javascript-fundamentals/"
 				target="_blank"
 				title="JavaScript Fundamentals (Blog)"
-				body="This Blog series is writted by Mr. Ånand while learning Javascript."
+				body="This Blog series is written by Mr. Ånand while learning Javascript."
 			/>
 			<Card
 				href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
 				target="_blank"
 				title="JavaScript - MDN (Docs)"
-				body="This well structured docs is from MDN Web Docs. Learn JavaScript with examples."
+				body="This well-structured docs are from MDN Web Docs. Learn JavaScript with examples."
 			/>
 			<Card
 				href="https://medium.com/@Prajwal25/variables-in-javascript-var-let-and-const-bbeb3a089fac"
 				target="_blank"
 				title="Variables in JavaScript (var, let, and const)"
-				body="This blog post get you familiar with variables in javaScript"
+				body="This blog post gets you familiar with variables in JavaScript"
 			/>
+
+			<Card
+				href="https://medium.com/@nishitbaria/how-does-javascript-work-behind-the-scenes-7c321b113bcc"
+				target="_blank"
+				title="How Does JavaScript Work Behind the Scene? JS Engine and Runtime Explained"
+				body="This blog post guides you about how JavaScript Works Behind the Scenes – Demystifying the JS Engine and Runtime."
+			/>
+
 			<Card
 				href="https://javascript.info/"
 				target="_blank"
 				title="JavaScript Reference (Docs)"
 				body="How it's done now. From the basics to advanced topics with simple, but detailed explanations."
 			/>
+			<Card
+				href="https://medium.com/@Prajwal25/what-is-dom-manipulation-33e5718cdcfa"
+				target="_blank"
+				title="What is DOM Manipulation?"
+				body="Learn all about DOM manipulation in javaScript"
+			/>
 		</ul>
 	</main>
-	
 </Layout>
 
 <style>
@@ -96,13 +106,9 @@ const { frontmatter } = Astro.props;
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #000000 30%, rgb(255, 255, 255) 60%);
 	}
-	/* html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	} */
-	code {
+
+	/* code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+	} */
 </style>
-

@@ -10,68 +10,75 @@ import { Tweet, Vimeo, YouTube } from "astro-embed";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-	(a, b) =>
-		new Date(b.frontmatter.publishDate).valueOf() -
-		new Date(a.frontmatter.publishDate).valueOf()
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
 );
 console.log(posts[0].frontmatter.image);
 ---
 
-
+<script src="../utils/search.js"></script>
 
 <Layout title="Blog">
-	<Container>
-		<Sectionhead>
-			<Fragment slot="title">
-				<span class="text-gradient">Our Blog</span>
-			</Fragment>
-			<Fragment slot="desc">
-				Our contributors write about topics and discussions around the
-				tech world.
-			</Fragment>
-		</Sectionhead>
-		<p class="instructions">
-			To contribute, open the directory <code
-				><a
-					href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages/blog"
-					>src/pages/blog</a
-				></code
-			> on GitHub. <br />We are working on fixing canonical URLs. This
-			will help you share your blogs on <strong>Resource Gallery</strong> without
-			creating any SEO problems for your original blog.<br />
-			<strong
-				><a href="https://github.com/Astrodevil/resource-gallery/issues"
-					>Open Issue:</a
-				></strong
-			> Improve the "Resource Gallery" and earn credits as early contributor🎉
-		</p>
-		<main class="mt-16">
-			<ul class="grid gap-16 max-w-4xl mx-auto">
-				{
-					posts.map((post, index) => (
-						<li>
-							<div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-								<a href={post.url}>
-									<Picture
-										src={post.frontmatter.image}
-										widths={[200, 400, 800]}
-										sizes="(max-width: 800px) 100vw, 800px"
-										aspectRatio="16:9"
-										alt="Thumbnail"
-										loading={index === 0 ? "eager" : "lazy"}
-										class="w-full rounded-md aspect-video"
-									/>
-								</a>
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">
+        <span class="text-gradient">Our Blog</span>
+      </Fragment>
+      <Fragment slot="desc">
+        Our contributors write about topics and discussions around the tech
+        world.
+      </Fragment>
+    </Sectionhead>
+    <p class="instructions">
+      To contribute, open the directory <code
+        ><a
+          href="https://github.com/Astrodevil/resource-gallery/tree/main/src/pages/blog"
+          >src/pages/blog</a
+        ></code
+      > on GitHub. <br />We are working on fixing canonical URLs. This will help
+      you share your blogs on <strong>Resource Gallery</strong> without creating
+      any SEO problems for your original blog.<br />
+      <strong
+        ><a href="https://github.com/Astrodevil/resource-gallery/issues"
+          >Open Issue:</a
+        ></strong
+      > Improve the "Resource Gallery" and earn credits as early contributor🎉
+    </p>
 
-								<div>
-									<div class="flex gap-2 mt-0">
-										<span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-											{post.frontmatter.category}
-										</span>
-										<div
-											class="text-1xl"
-											style="text-align: center; z-index:1; margin-top: -3px"
-											onclick={`(function() {
+    <!--Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search Blog title/author..." />
+      <button style="color: #5A2AAB; font-weight: bold">Search</button>
+    </div>
+
+    <main class="mt-16">
+      <ul class="grid gap-16 max-w-4xl mx-auto">
+        {
+          posts.map((post, index) => (
+            <li>
+              <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+                <a href={post.url}>
+                  <Picture
+                    src={post.frontmatter.image}
+                    widths={[200, 400, 800]}
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    aspectRatio="16:9"
+                    alt="Thumbnail"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    class="w-full rounded-md aspect-video"
+                  />
+                </a>
+
+                <div>
+                  <div class="flex gap-2 mt-0">
+                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                      {post.frontmatter.category}
+                    </span>
+                    <div
+                      class="text-1xl"
+                      style="text-align: center; z-index:1; margin-top: -3px"
+                      onclick={`(function() {
         										const input = document.createElement('textarea');
         										input.value = 'https://resourcegallery.live/${post.url}';
         										document.body.appendChild(input);
@@ -94,48 +101,39 @@ console.log(posts[0].frontmatter.image);
       												document.body.removeChild(popup);
     											}, 1000);
       										})();`}>
-											<i
-												class="fa fa-share-alt"
-												aria-hidden="true"
-											/>
-										</div>
-									</div>
+                      <i class="fa fa-share-alt" aria-hidden="true" />
+                    </div>
+                  </div>
 
-									<a href={post.url}>
-										<h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-											{post.frontmatter.title}
-										</h2>
+                  <a href={post.url}>
+                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                      {post.frontmatter.title}
+                    </h2>
 
-										<div class="flex gap-2 mt-3">
-											<span class="text-gray-400">
-												{post.frontmatter.author}
-											</span>
-											<span class="text-gray-400">
-												•{" "}
-											</span>
-											<time
-												class="text-gray-400"
-												datetime={
-													post.frontmatter.publishDate
-												}>
-												{getFormattedDate(
-													post.frontmatter.publishDate
-												)}
-											</time>
-										</div>
-									</a>
-								</div>
-							</div>
-						</li>
-					))
-				}
-			</ul>
-		</main>
-	</Container>
+                    <div class="flex gap-2 mt-3">
+                      <span class="text-gray-400">
+                        {post.frontmatter.author}
+                      </span>
+                      <span class="text-gray-400">• </span>
+                      <time
+                        class="text-gray-400"
+                        datetime={post.frontmatter.publishDate}>
+                        {getFormattedDate(post.frontmatter.publishDate)}
+                      </time>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
 </Layout>
 
 <style>
-	/* main {
+  /* main {
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 120ch;
@@ -145,49 +143,49 @@ console.log(posts[0].frontmatter.image);
 		font-weight: 800;
 		margin: 0;
 	} */
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	/* .link-card-grid {
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  /* .link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
 	} */
 
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			#000000 30%,
-			rgb(255, 255, 255) 60%
-		);
-	}
-	/* html {
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #000000 30%,
+      rgb(255, 255, 255) 60%
+    );
+  }
+  /* html {
 		font-family: system-ui, sans-serif;
 		background-color: #F6F6F6;
 	}
@@ -195,4 +193,25 @@ console.log(posts[0].frontmatter.image);
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	} */
+
+  /* Center align the search bar */
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  /* Add border radius to the search bar */
+  .search-bar input[type="text"],
+  .search-bar button {
+    border-radius: 10px;
+    padding: 8px;
+    border: solid 2px;
+  }
+
+  /* Add some spacing between input and button */
+  .search-bar input[type="text"] {
+    margin-right: 5px;
+  }
 </style>
