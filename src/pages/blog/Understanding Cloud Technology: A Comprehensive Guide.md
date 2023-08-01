@@ -15,7 +15,7 @@ tags: [cloud, programming,]
 The way that organizations run and keep their data has been completely transformed by cloud technology. It enables businesses to use storage, software, and applications without the requirement for physical infrastructure. We'll explore cloud technology's definition, workings, and advantages in this blog. Let's examine what cloud technology is in reality.
 
 ## What is Cloud Technology?
-Utilizing distant servers connected to the internet to store, manage, and process data is known as cloud computing. With the use of cloud technology, users may access data from any location with an internet connection instead of depending on a local server or personal computer.  "cloud" refers to the internet, and the technology enables users to store and access data and apps through the internet without relying on actual hardware.
+Utilizing distant servers connected to the internet to store, manage, and process data is known as cloud computing. With the use of cloud technology, users may access data from any location with an internet connection instead of depending on a local server or personal computer. The name "cloud" refers to the internet, and the technology enables users to store and access data and apps through the internet without relying on actual hardware.
 
 ## How Does Cloud Technology Work?
 A network of distant computers is used by cloud computing to store, manage, and process data. These servers are accessible to users over the internet, and they are responsible for all processing and storage. Virtualization, which enables numerous virtual computers to run on a single physical server, is the foundation of cloud technology.
