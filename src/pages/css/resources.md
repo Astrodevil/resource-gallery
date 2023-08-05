@@ -1,6 +1,6 @@
 ---
 title: "Resources"
-excerpt: "Resource Gallery - CSS |  We bring written resources realated to  Cascading Style Sheet."
+excerpt: "Resource Gallery - CSS |  We bring essential resources related to Cascading Style Sheet."
 publishDate: "2023-08-05T20:32:30Z"
 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDpIANYGZh3r5TdUTLg9LHgmyLsaPJjZqWQ&usqp=CAU"
 author: "Ms.Parul"
