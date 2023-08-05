@@ -4,7 +4,7 @@ excerpt: "Resource Gallery - CSS |  We bring quality books related to Cascading 
 publishDate: "2023-08-05T20:32:30Z"
 image: "https://www.frontendmag.com/wp-content/uploads/2023/05/best-books-for-html-and-css.jpeg"
 author: "Ms.Parul"
-layout: "@layout/ContentLayout.astro"
+layout: "@layouts/ContentLayout.astro"
 tags: [css, books]
 ---
 
