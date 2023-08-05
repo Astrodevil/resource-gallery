@@ -2,7 +2,7 @@
 title: "CSS Gaming Adventure"
 excerpt: "Resource Gallery - CSS |  We bring gaming resources realated to Cascading Style Sheet."
 publishDate: "2023-08-05T20:32:30Z"
-image: "https://www.frontendmag.com/wp-content/uploads/2023/05/best-books-for-html-and-css.jpeg"
+image: "https://elephantsolutions.net/wp-content/uploads/2021/07/small-cover-360x210px.jpg"
 author: "Ms.Parul"
 layout: "@layouts/ContentLayout.astro"
 tags: [css, cssgames, document]
