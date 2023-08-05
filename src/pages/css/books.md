@@ -1,6 +1,6 @@
 ---
 title: "Books"
-excerpt: "Resource Gallery - CSS |  We bring quality books realated to  Cascading Style Sheet."
+excerpt: "Resource Gallery - CSS |  We bring quality books related to Cascading Style Sheet."
 publishDate: "2023-08-05T20:32:30Z"
 image: "https://www.frontendmag.com/wp-content/uploads/2023/05/best-books-for-html-and-css.jpeg"
 author: "Ms.Parul"
