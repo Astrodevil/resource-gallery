@@ -1,6 +1,6 @@
 ---
 title: "CSS Gaming Adventure"
-excerpt: "Resource Gallery - CSS |  We bring written resources realated to  Cascading Style Sheet."
+excerpt: "Resource Gallery - CSS |  We gaming resources related to Cascading Style Sheet."
 publishDate: "2023-08-05T20:32:30Z"
 image: "https://www.frontendmag.com/wp-content/uploads/2023/05/best-books-for-html-and-css.jpeg"
 author: "Ms.Parul"
