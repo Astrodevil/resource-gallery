@@ -72,4 +72,5 @@ CSS Diner is a delightful and interactive game that educates users about CSS Sel
 Grid Garden is a captivating game that imparts CSS Grid layout knowledge. Players cultivate their way through challenges, using Grid properties to arrange virtual gardens. This fun and immersive game make learning CSS Grid a delightful gardening adventure!
 
 [image](https://user-images.githubusercontent.com/80768852/250306457-631406d8-fcf8-4e4f-86bc-8dfee9c92b59.png)
+
 🔗 [**Grid-Garden**]( https://cssgridgarden.com/)
