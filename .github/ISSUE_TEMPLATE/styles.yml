@@ -1,0 +1,40 @@
+name: Style Changing Request
+description: Suggest a style designs
+title: '[style]: '
+labels: ['enhancement']
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this template!
+  - type: textarea
+    id: style-idea
+    attributes:
+      label: What's the style idea?
+      placeholder: Add descriptions
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Add screenshots
+      description: Add screenshots to show the demo
+      placeholder: Add screenshots
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+        - label: I have read the [Contributing Guidelines](https://github.com/ZeroOctave/resource-gallery/blob/main/CONTRIBUTION.md)
+          required: true
+  - type: checkboxes
+    id: additional-options
+    attributes:
+      label: Additional Options
+      options:
+        - label: I'm a GSSoC'23 contributor
+        - label: I want to work on this issue
