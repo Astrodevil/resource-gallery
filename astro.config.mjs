@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     image({
-      serviceEntryPoint: "@astrojs/image/sharp",
+      serviceEntryPoint: "astro/assets/services/noop",
     }),
     mdx(),
     sitemap(),
